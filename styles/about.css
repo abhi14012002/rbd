@@ -1,0 +1,637 @@
+/* About Page Specific Styles */
+
+/* Page Hero */
+.page-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.page-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.page-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(255, 107, 53, 0.4) 100%);
+    z-index: -1;
+}
+
+.page-hero .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-hero .hero-content {
+    text-align: center;
+    color: var(--white);
+    z-index: 1;
+}
+
+.page-title {
+    font-family: var(--font-secondary);
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.breadcrumb a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-orange);
+}
+
+.breadcrumb span {
+    color: var(--primary-orange);
+}
+
+/* Company Overview */
+.company-overview {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.overview-content .section-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.overview-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--medium-gray);
+    margin-bottom: 25px;
+}
+
+.company-highlights {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.highlight-item {
+    text-align: center;
+}
+
+.highlight-number {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-orange);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.overview-visual {
+    position: relative;
+}
+
+.visual-container {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-medium);
+}
+
+.floating-card {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-heavy);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 200px;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.card-content h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    margin: 0;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.mv-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius-large);
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.mv-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--white);
+    font-size: 2rem;
+    transition: transform var(--transition-fast);
+}
+
+.mv-card:hover .mv-icon {
+    transform: scale(1.1);
+}
+
+.mv-card h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.mv-card p {
+    color: var(--medium-gray);
+    line-height: 1.7;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.feature-card {
+    background: var(--light-gray);
+    padding: 30px 25px;
+    border-radius: var(--radius-medium);
+    text-align: center;
+    transition: all var(--transition-medium);
+    border: 2px solid transparent;
+}
+
+.feature-card:hover {
+    background: var(--white);
+    border-color: var(--primary-orange);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: transform var(--transition-fast);
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-card h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Team Section */
+.team-section {
+    padding: 100px 0;
+    background: var(--light-gray);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.team-member {
+    background: var(--white);
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: all var(--transition-medium);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.member-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 107, 53, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.team-member:hover .member-overlay {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-orange);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.member-info {
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.member-info h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.member-role {
+    color: var(--primary-orange);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.member-bio {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Certifications */
+.certifications {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.cert-card {
+    background: var(--light-gray);
+    padding: 40px 30px;
+    border-radius: var(--radius-large);
+    text-align: center;
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+}
+
+.cert-card:hover::before {
+    transform: scaleX(1);
+}
+
+.cert-card:hover {
+    background: var(--white);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.cert-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: var(--white);
+    font-size: 2rem;
+    transition: transform var(--transition-fast);
+}
+
+.cert-card:hover .cert-icon {
+    transform: scale(1.1);
+}
+
+.cert-card h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.cert-card p {
+    color: var(--medium-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-hero {
+        height: 50vh;
+        margin-top: 70px;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .company-highlights {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .floating-card {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .mv-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        height: 40vh;
+    }
+    
+    .overview-content .section-header {
+        text-align: center;
+    }
+    
+    .company-highlights {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .mv-card {
+        padding: 30px 20px;
+    }
+    
+    .feature-card {
+        padding: 25px 20px;
+    }
+    
+    .member-info {
+        padding: 25px 20px;
+    }
+    
+    .cert-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Animation Classes */
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Animations */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.highlight-number {
+    animation: countUp 0.8s ease forwards;
+}
+
+.highlight-item:nth-child(2) .highlight-number {
+    animation-delay: 0.2s;
+}
+
+.highlight-item:nth-child(3) .highlight-number {
+    animation-delay: 0.4s;
+}
+
+/* Hover Effects */
+.mv-card:hover {
+    background: linear-gradient(135deg, var(--white) 0%, rgba(255, 107, 53, 0.05) 100%);
+}
+
+.feature-card:hover {
+    background: linear-gradient(135deg, var(--white) 0%, rgba(255, 107, 53, 0.05) 100%);
+}
+
+.cert-card:hover {
+    background: linear-gradient(135deg, var(--white) 0%, rgba(255, 107, 53, 0.05) 100%);
+}
